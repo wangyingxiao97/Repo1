@@ -8,10 +8,13 @@ eureka:
   client:
     service-url: # 映射路径对应的实际url地址
       defaultZone: http://127.0.0.1:10086/eureka
-
+    fetch-registry: false # 去除自己的注册
+    register-with-eureka: false
 # 网关配置默认路由前缀（统一配默认请求前缀）
 zuul:
-  prefix: /api # 添加路由前缀
+  prefix: /api  # 添加路由前缀
+  routes:
+    item-service: /item/**
 # 配置全局异常熔断时间
 hystrix:
   command:
