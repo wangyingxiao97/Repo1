@@ -4,6 +4,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
+import tk.mybatis.spring.annotation.MapperScan;
+
 /**
  * author:  niceyoo
  * blog:    https://cnblogs.com/niceyoo
@@ -12,9 +14,10 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @EnableEurekaClient
 @SpringBootApplication
-public class LyItemApplication {
+@MapperScan("com.leyou.item.mapper")
+public class LyItemServiceApplication {
 
     public static void main(String[] args){
-        SpringApplication.run(LyItemApplication.class);
+        SpringApplication.run(LyItemServiceApplication.class);
     }
 }
