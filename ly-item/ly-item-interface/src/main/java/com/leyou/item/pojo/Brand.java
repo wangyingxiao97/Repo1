@@ -9,23 +9,18 @@ import tk.mybatis.mapper.annotation.KeySql;
 /**
  * author:  niceyoo
  * blog:    https://cnblogs.com/niceyoo
- * desc:
+ * desc:    品牌
  */
 
 @Data
-@Table(name = "tb_category")
-public class Category {
+@Table(name="tb_brand")
+public class Brand {
 
     @Id
     @KeySql(useGeneratedKeys = true)
     private Long id;
-    /** 分类名称 */
     private String name;
-    /** 父级id */
-    private Long parentId;
-    /** 是否是父级 */
-    private Boolean isParent;
-    /** 排序 */
-    private Integer sort;
+    private String image;
+    private Character letter;
 
 }
