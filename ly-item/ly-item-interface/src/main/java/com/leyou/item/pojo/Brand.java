@@ -16,11 +16,15 @@ import tk.mybatis.mapper.annotation.KeySql;
 @Table(name="tb_brand")
 public class Brand {
 
+    /** 品牌id **/
     @Id
     @KeySql(useGeneratedKeys = true)
     private Long id;
+    /** 品牌名称 **/
     private String name;
+    /** 品牌图片 **/
     private String image;
+    /** 品牌的首字母 **/
     private Character letter;
 
 }

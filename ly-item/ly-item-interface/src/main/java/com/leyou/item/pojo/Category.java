@@ -9,9 +9,8 @@ import tk.mybatis.mapper.annotation.KeySql;
 /**
  * author:  niceyoo
  * blog:    https://cnblogs.com/niceyoo
- * desc:
+ * desc:    分类
  */
-
 @Data
 @Table(name = "tb_category")
 public class Category {

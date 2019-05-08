@@ -7,9 +7,8 @@ import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 /**
  * author:  niceyoo
  * blog:    https://cnblogs.com/niceyoo
- * desc:
+ * desc:    zuul网关启动类
  */
-
 @EnableZuulProxy
 @SpringCloudApplication
 public class LyGatewayApplication {

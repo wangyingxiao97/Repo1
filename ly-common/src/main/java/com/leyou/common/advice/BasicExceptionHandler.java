@@ -12,7 +12,7 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * author:  niceyoo
  * blog:    https://cnblogs.com/niceyoo
- * desc:
+ * desc:    公共异常检测类
  */
 
 @Slf4j

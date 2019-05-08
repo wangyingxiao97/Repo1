@@ -6,7 +6,7 @@ import java.util.List;
 import lombok.Data;
 
 /**
- * 通用返回实体
+ * 带分页的返回实体
  * @param <T>
  */
 @Data

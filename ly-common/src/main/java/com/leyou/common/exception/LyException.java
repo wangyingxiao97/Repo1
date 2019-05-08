@@ -19,5 +19,4 @@ public class LyException extends RuntimeException {
         this.exceptionEnum = exceptionEnum;
     }
 
-
 }

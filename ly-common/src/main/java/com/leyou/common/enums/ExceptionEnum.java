@@ -22,5 +22,4 @@ public enum ExceptionEnum {
     private int code;
     private String msg;
 
-
 }
