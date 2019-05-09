@@ -125,6 +125,10 @@ public class JsonUtils {
         System.out.println("user:"+serialize(user));
 
         // 2、反序列化
+        String fanserialize = serialize(user);
+        User user2 = parse(fanserialize, User.class);
+        String name = user2.getName();
+        System.out.println(name);
 
     }
 }

@@ -13,8 +13,9 @@ import lombok.Data;
 import tk.mybatis.mapper.annotation.KeySql;
 
 /**
- * @author bystander
- * @date 2018/9/18
+ * author:  niceyoo
+ * blog:    https://cnblogs.com/niceyoo
+ * desc:    商品聚合信息最小单元：品牌、分类、标题、是否上架
  */
 @Table(name = "tb_spu")
 @Data
@@ -23,32 +24,26 @@ public class Spu {
     @Id
     @KeySql(useGeneratedKeys = true)
     private Long id;
-    private String title;
-    private String subTitle;
-    private Long cid1;
-    private Long cid2;
-    private Long cid3;
-    private Long brandId;
-    private Boolean saleable;
-    private Boolean valid;
-    private Date createTime;
-
+    private String title;// 标题
+    private String subTitle;// 子标题
+    private Long cid1;// 1级类目id
+    private Long cid2;// 2级类目id
+    private Long cid3;// 3级类目id
+    private Long brandId;// 商品所属品牌id
+    private Boolean saleable;// 是否上架，0下架，1上架
+    private Boolean valid;// 是否有效，0已删除，1有效
+    private Date createTime; // 添加时间
     @JsonIgnore
-    private Date lastUpdateTime;
-
-
+    private Date lastUpdateTime;// 最后修改时间
     //spu所属的分类名称
     @Transient
     private String cname;
-
     //spu所属品牌名
     @Transient
     private String bname;
-
     //spu详情
     @Transient
     private SpuDetail spuDetail;
-
     //sku集合
     @Transient
     private List<Sku> skus;

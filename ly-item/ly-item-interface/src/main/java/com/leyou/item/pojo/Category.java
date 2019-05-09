@@ -9,7 +9,7 @@ import tk.mybatis.mapper.annotation.KeySql;
 /**
  * author:  niceyoo
  * blog:    https://cnblogs.com/niceyoo
- * desc:    分类
+ * desc:    商品分类
  */
 @Data
 @Table(name = "tb_category")

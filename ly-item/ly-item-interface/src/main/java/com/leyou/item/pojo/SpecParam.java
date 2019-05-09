@@ -8,8 +8,11 @@ import lombok.Data;
 import tk.mybatis.mapper.annotation.KeySql;
 
 /**
- * @author bystander
- * @date 2018/9/18
+ * author:  niceyoo
+ * blog:    https://cnblogs.com/niceyoo
+ * desc:    规格参数
+ *              - 一个商品分类下有多个规格组
+ *              - 一个规格组下有多个规格参数
  */
 @Data
 @Table(name = "tb_spec_param")
@@ -19,8 +22,8 @@ public class SpecParam {
     @KeySql(useGeneratedKeys = true)
     private Long id;
     private Long cid;
-    private Long groupId;
-    private String name;
+    private Long groupId; // 规格组id
+    private String name;// 规格名称
     @Column(name = "`numeric`")
     private Boolean numeric;
     private String unit;

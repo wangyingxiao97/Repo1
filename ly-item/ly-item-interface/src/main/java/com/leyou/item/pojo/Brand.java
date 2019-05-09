@@ -9,14 +9,13 @@ import tk.mybatis.mapper.annotation.KeySql;
 /**
  * author:  niceyoo
  * blog:    https://cnblogs.com/niceyoo
- * desc:    品牌
+ * desc:    商品品牌
  */
 
 @Data
 @Table(name="tb_brand")
 public class Brand {
 
-    /** 品牌id **/
     @Id
     @KeySql(useGeneratedKeys = true)
     private Long id;

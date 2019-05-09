@@ -12,11 +12,12 @@ import tk.mybatis.mapper.annotation.KeySql;
 /**
  * author:  niceyoo
  * blog:    https://cnblogs.com/niceyoo
- * desc:
+ * desc:    库存最小单元：规格、颜色、款式
  */
 @Table(name = "tb_sku")
 @Data
 public class Sku {
+
     @Id
     @KeySql(useGeneratedKeys = true)
     private Long id;// sku id
