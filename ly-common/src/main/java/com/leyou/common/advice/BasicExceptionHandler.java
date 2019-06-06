@@ -14,7 +14,6 @@ import lombok.extern.slf4j.Slf4j;
  * blog:    https://cnblogs.com/niceyoo
  * desc:    公共异常检测类
  */
-
 @Slf4j
 @ControllerAdvice
 public class BasicExceptionHandler {

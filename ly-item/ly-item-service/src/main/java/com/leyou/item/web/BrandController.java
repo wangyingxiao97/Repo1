@@ -24,7 +24,6 @@ import java.util.Map;
  * blog:    https://cnblogs.com/niceyoo
  * desc:    品牌 controller
  */
-
 @RestController
 @RequestMapping("brand")
 class BrandController {
@@ -32,6 +31,15 @@ class BrandController {
     @Autowired
     private BrandService mBrandService;
 
+    /**
+     * 分类、关键字等查询品牌
+     * @param page
+     * @param rows
+     * @param sortBy
+     * @param desc
+     * @param key
+     * @return
+     */
     @GetMapping("page")
     public ResponseEntity<PageResult<Brand>> queryCategoryListByPid(
             @RequestParam(value = "page", defaultValue = "1") Integer page,
@@ -48,21 +56,35 @@ class BrandController {
         return ResponseEntity.ok(result);
     }
 
-    //添加品牌
+    /**
+     * 添加品牌
+     * @param brand
+     * @param cids
+     * @return
+     */
     @PostMapping
     public ResponseEntity<Void> saveBrand(Brand brand, @RequestParam("cids") List<Long> cids) {
         mBrandService.saveBrand(brand, cids);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
-    //修改品牌
+    /**
+     * 修改品牌
+     * @param brand
+     * @param cids
+     * @return
+     */
     @PutMapping
     public ResponseEntity<Void> changeBrand(Brand brand, @RequestParam("cids") List<Long> cids) {
         mBrandService.changeBrand(brand, cids);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
-    //删除品牌
+    /**
+     * 删除品牌
+     * @param map
+     * @return
+     */
     @DeleteMapping
     public ResponseEntity<Void> deleteBrand(@RequestBody Map<String, Long> map) {
         //System.out.println(map);

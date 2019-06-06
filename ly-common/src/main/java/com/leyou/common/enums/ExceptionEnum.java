@@ -9,7 +9,6 @@ import lombok.NoArgsConstructor;
  * blog:    https://cnblogs.com/niceyoo
  * desc:    通用异常 enum
  */
-
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor

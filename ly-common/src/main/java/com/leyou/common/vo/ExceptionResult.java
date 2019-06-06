@@ -12,10 +12,19 @@ import lombok.Data;
 @Data
 public class ExceptionResult {
 
+    /**
+     * 返回的状态码
+     */
     private int status;
 
+    /**
+     * 返回信息
+     */
     private String message;
 
+    /**
+     * 时间戳
+     */
     private long timestamp;
 
     public ExceptionResult(ExceptionEnum em) {

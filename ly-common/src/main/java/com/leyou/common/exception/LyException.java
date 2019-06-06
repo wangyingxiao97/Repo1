@@ -8,7 +8,7 @@ import lombok.Getter;
  * @author bystander
  * @date 2018/9/15
  *
- * 自定义异常类
+ * 自定义异常类 - 配合 ControllerAdvice 使用
  */
 @Getter
 public class LyException extends RuntimeException {
